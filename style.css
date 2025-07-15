@@ -1,0 +1,165 @@
+/* style.css - Кнопка "Скачать" как строка текста */
+
+/* Основные стили для всего тела страницы */
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(to right bottom, #f5f8fc, #ffffff);
+    color: #5d6874;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* Контейнер для контента */
+.container {
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eef2f5;
+}
+
+/* Стили для основных заголовков */
+h1 {
+    color: #3f4a56;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #7a9fd6;
+    border-radius: 1px;
+}
+
+/* Стили для подзаголовков */
+h2 {
+    color: #6a7685;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 600;
+    border-bottom: none;
+    padding-bottom: 0;
+    position: relative;
+}
+
+h2::before {
+    content: '•';
+    color: #7a9fd6;
+    font-size: 1em;
+    margin-right: 7px;
+}
+
+/* Стили для абзацев и списков */
+p, ul {
+    font-size: 1.0em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 7px;
+    position: relative;
+    padding-left: 22px;
+}
+
+ul li::before {
+    content: '✔';
+    color: #5cb85c;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 0.85em;
+    top: 2px;
+}
+
+/* Стили для ссылок */
+a {
+    color: #7a9fd6;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #5e82c1;
+}
+
+/* Стили для кнопки скачивания - Теперь как часть строки */
+.button-link {
+    display: inline; /* Делаем ее строчным элементом */
+    background: none; /* Убираем фон */
+    color: #4e534e; /* Зеленый цвет текста как ссылка */
+    padding: 0; /* Убираем внутренние отступы */
+    border-radius: 0; /* Убираем скругление */
+    text-decoration: underline; /* Подчеркиваем как ссылку */
+    font-weight: normal; /* Обычный шрифт */
+    font-size: 1.0em; /* Размер текста как у основного текста */
+    letter-spacing: 0; /* Без расстояния между буквами */
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+    margin-top: 0; /* Убираем верхний отступ */
+    box-shadow: none; /* Убираем все тени */
+    border: none;
+    cursor: pointer;
+}
+
+.button-link:hover {
+    color: #284128; /* Чуть темнее зеленый при наведении */
+    text-decoration: none; /* Убираем подчеркивание при наведении (или оставляем, если хотите) */
+    transform: none; /* Убираем все трансформации */
+    box-shadow: none; /* Убираем все тени */
+}
+
+.button-link:active {
+    color: #2c4b2c; /* Ещё темнее при нажатии */
+    transform: none;
+    box-shadow: none;
+}
+
+/* Футер */
+.footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eef2f5;
+    font-size: 0.8em;
+    text-align: center;
+    color: #9caab8;
+}
+
+.footer a {
+    margin: 0 8px;
+    color: #7b8ea0;
+}
+
+.footer a:hover {
+    color: #5d6874;
+}
